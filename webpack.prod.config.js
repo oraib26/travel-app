@@ -2,7 +2,11 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
-// Construct __dirname to use paths correctly in ES modules
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -19,7 +23,7 @@ export default {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: ['babel-loader']
+                use: 'babel-loader'
             },
             {
                 test: /\.scss$/,
@@ -31,12 +35,10 @@ export default {
         new HtmlWebpackPlugin({
             template: './src/client/html/views/index.html'
         }),
-        
         new webpack.DefinePlugin({
             'process.env.GEONAMES_USERNAME': JSON.stringify(process.env.GEONAMES_USERNAME),
             'process.env.WEATHERBIT_API_KEY': JSON.stringify(process.env.WEATHERBIT_API_KEY),
             'process.env.PIXABAY_API_KEY': JSON.stringify(process.env.PIXABAY_API_KEY)
         })
-   
     ]
 };

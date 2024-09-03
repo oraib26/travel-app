@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel App</title>
-    <link rel="stylesheet" href="../../styles/style.scss">
 </head>
+
 <body>
     <header>
         <h1>Travel App</h1>
@@ -20,44 +21,26 @@
         <section id="home">
             <h2>Welcome to the Travel App</h2>
             <p>Discover weather, images, and geographical data for your next destination.</p>
-            
+
             <div>
                 <input type="text" id="locationInput" placeholder="Enter a location">
-                <button onclick="searchLocation()">Search Location</button>
+                <input type="date" id="tripDate">
+                <button id="findTripButton">Find Trip</button>
             </div>
             <div id="locationResult"></div>
-        </section>
-        
-        <section id="weather">
-            <h2>Weather Details</h2>
-            <div>
-                <label for="latitude">Latitude:</label>
-                <input type="text" id="latitude">
-                <label for="longitude">Longitude:</label>
-                <input type="text" id="longitude">
-                <button onclick="searchWeather()">Search Weather</button>
-            </div>
             <div id="weatherResult"></div>
+            <img id="imageResult" >
         </section>
-        
-        <section id="images">
-            <h2>Images</h2>
-            <div>
-                <input type="text" id="imageQuery" placeholder="Search for images">
-                <button onclick="searchImages()">Search Images</button>
-            </div>
-            <div id="imageResult"></div>
-        </section>
-        
+
         <section id="about">
             <h2>About This App</h2>
             <p>This app provides comprehensive travel information to assist with your travel planning.</p>
         </section>
     </main>
     <footer>
-        <p>Copyright © 2024 Travel App</p>
+        <p>Oraib Sleet © 2024 Travel App</p>
     </footer>
     <script src="bundle.js"></script>
-
 </body>
+
 </html>

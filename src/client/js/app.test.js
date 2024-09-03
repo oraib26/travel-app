@@ -1,7 +1,6 @@
 describe('Client App', () => {
-    it('should define runApp function', async () => {
-      const { runApp } = await import('./app');
-      expect(runApp).toBeDefined();
-    });
+  it('should define performSearch function', async () => {
+      const { performSearch } = await import('./app');
+      expect(performSearch).toBeDefined();
   });
-  
+});
