@@ -22,6 +22,9 @@ To run this project locally, follow these steps:
 
 After installation, the app can be accessed at `http://localhost:3000`. Use the search functionality on the homepage to find travel information about various locations.
 
+## Node.js Version
+This project requires Node.js version 18.x or higher. Please make sure you have the correct version installed before running the project.
+
 ## APIs Used
 
 - **Geonames**: Used for fetching geographical data.
