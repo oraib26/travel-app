@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from './server';
+import app from './server.js';
 
 describe('Express Server', () => {
   it('should return a 200 status for the home route', async () => {

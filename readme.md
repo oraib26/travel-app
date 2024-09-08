@@ -17,6 +17,37 @@ To run this project locally, follow these steps:
 3. Start the server:
     ```npm start```
 
+## Project Setup
+
+1. Clone the repository.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+## Running the Project
+
+1. Start the server:
+   ```bash
+   npm start
+   ```
+
+## Testing
+
+1. Run tests using Jest:
+   ```bash
+   npm run test
+   ```
+
+## API Key Setup
+
+1. To update the API keys, open the `.env` file and add your API keys like this:
+   ```
+   WEATHER_API_KEY=your-weather-api-key
+   TRAFFIC_API_KEY=your-traffic-api-key
+   ```
+
+
 
 ## Usage
 

@@ -7,8 +7,11 @@ import fetch from 'node-fetch';
 dotenv.config();
 
 const app = express();
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+
 
 // API keys retrieved from environment variables
 const geonamesUsername = process.env.GEONAMES_USERNAME;
@@ -19,6 +22,10 @@ console.log(process.env.GEONAMES_USERNAME)
 
 app.use(express.json());
 app.use(express.static('dist'));
+
+app.get('/', (req, res) => {
+    res.send('Hello from the server!');
+  });
 
 app.get('/location', async (req, res) => {
     const { city } = req.query;
@@ -70,4 +77,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
 export default app;
