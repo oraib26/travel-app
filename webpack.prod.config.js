@@ -3,6 +3,8 @@ import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
 import dotenv from 'dotenv';
+import WorkboxPlugin from 'workbox-webpack-plugin';
+
 
 dotenv.config();
 
@@ -39,6 +41,10 @@ export default {
             'process.env.GEONAMES_USERNAME': JSON.stringify(process.env.GEONAMES_USERNAME),
             'process.env.WEATHERBIT_API_KEY': JSON.stringify(process.env.WEATHERBIT_API_KEY),
             'process.env.PIXABAY_API_KEY': JSON.stringify(process.env.PIXABAY_API_KEY)
-        })
+        }),
+        new WorkboxPlugin.GenerateSW({
+            clientsClaim: true,
+            skipWaiting: true,
+        }) 
     ]
 };
